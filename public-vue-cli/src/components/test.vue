@@ -1,25 +1,24 @@
 <template>
-  <div class="index">
+  <div class="test">
     <h1>{{ msg }}</h1>
     <h1>{{ time }}</h1>
-    <div><router-link to="/test">jump</router-link></div>
   </div>
 </template>
 
 <script>
   import {get} from "../utils/request.js"
 export default {
-  name: 'index',
+  name: 'test',
   data () {
     return {
-      msg: 'A Public VUE Frame',
+      msg: 'test',
       time:'2019-8-5 10:30:00'
     }
   },
   mounted(){
     //更新时间
     this.get(host.url+'/newtime').then((res)=>{
-      console.log(res)
+      //console.log(res)
     })
   },
   methods:{
